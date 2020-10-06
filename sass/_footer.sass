@@ -1,0 +1,45 @@
+.footer
+    height: 630px
+    position: relative
+    &__info
+        position: absolute
+        top: 0
+        left: 50%
+        transform: translateX(-50%)
+        width: 360px
+        height: 170px
+        background-color: $main_color
+        padding: 50px 68px 60px 68px
+    &__addr
+        margin-bottom: 36px
+        font-style: normal
+        color: #ffffff
+        font-size: 20px
+        font-weight: 500
+        line-height: 20px
+        text-align: center
+    &__phone
+        display: block
+        color: #ffffff
+        font-size: 20px
+        font-weight: 700
+        line-height: 20px
+        text-align: center
+        margin-bottom: 38px
+        &:hover
+            color: #ffffff
+            text-decoration: underline
+    &__social 
+        display: flex
+        justify-content: center
+        align-items: center
+    &__social-item
+        display: flex
+        justify-content: center
+        align-items: center
+        margin: 0 15px
+        img
+            width: 50px
+            height: 50px
+            &:hover
+                box-shadow: 5px 5px 10px (#ffffff)
