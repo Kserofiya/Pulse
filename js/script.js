@@ -41,19 +41,18 @@ toggleSlide('.catalog-item__list');
 
 // Modal
 
-$("[data-modal=consultation]").on('click', function() {
-    $('.overlay, #consultation').fadeIn('fast');
+$('[data-modal=consultation]').on('click', function() {
+  $('.overlay, #consultation').fadeIn('slow');
 });
 $('.modal__close').on('click', function() {
-  $('.overlay, #consultation, #order, thanks').fadeOut('fast');
+  $('.overlay, #consultation, #thanks, #order').fadeOut('slow');
 });
-$('.button_mini').on('click', function() {
-  $('.overlay, #order').fadeIn('fast');
-});
+
 $('.button_mini').each(function(i) {
-    $(this).on('click', function() {
-      $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text())
-    })
+  $(this).on('click', function() {
+      $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+      $('.overlay, #order').fadeIn('slow');
+  })
 });
 
 
