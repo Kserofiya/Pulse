@@ -99,8 +99,8 @@ $('form').submit(function(e) {
       data: $(this).serialize()
   }).done(function() {
       $(this).find("input").val("");
-      $('#consultation form, #consultation-form, #order form').fadeOut();
-      $('.overlay, #thanks').fadeIn();
+      $('#consultation, #order').fadeOut();
+      $('.overlay, #thanks').fadeIn('slow');
       $('form').trigger('reset');
   });
   return false;
