@@ -99,7 +99,7 @@ $('form').submit(function(e) {
       data: $(this).serialize()
   }).done(function() {
       $(this).find("input").val("");
-      $('form').fadeOut();
+      $('#consultation form, #consultation-form, #order form').fadeOut();
       $('.overlay, #thanks').fadeIn();
       $('form').trigger('reset');
   });
