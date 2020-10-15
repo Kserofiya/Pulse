@@ -42,16 +42,16 @@ toggleSlide('.catalog-item__list');
 // Modal
 
 $('[data-modal=consultation]').on('click', function() {
-  $('.overlay, #consultation').fadeIn('slow');
+  $('.overlay, #consultation').fadeIn();
 });
 $('.modal__close').on('click', function() {
-  $('.overlay, #consultation, #thanks, #order').fadeOut('slow');
+  $('.overlay, #consultation, #thanks, #order').fadeOut();
 });
 
 $('.button_mini').each(function(i) {
   $(this).on('click', function() {
       $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
-      $('.overlay, #order').fadeIn('slow');
+      $('.overlay, #order').fadeIn();
   })
 });
 
@@ -93,13 +93,13 @@ $('input[name=phone]').mask("+7 (999) 999-99-99");
 $('form').submit(function(e) {
   e.preventDefault();
   $.ajax({
-      type: "POST",
+      method: "POST",
       url: "mailer/smart.php",
       data: $(this).serialize()
   }).done(function() {
       $(this).find("input").val("");
       $('#consultation, #order').fadeOut();
-      $('.overlay, #thanks').fadeIn('slow');
+      $('.overlay, #thanks').fadeIn();
       $('form').trigger('reset');
   });
   return false;
