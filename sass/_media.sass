@@ -12,7 +12,7 @@
         height: 250px
 
 
-@media (max-width: 767px)
+@media (max-width: 768px)
     .header
         padding: 10px
     .promo
@@ -24,15 +24,12 @@
         padding-left: 10px
     .carousel
         img
-            width: 500px
-            height: 400px
-        .next
-            right: 0px
-        .prev
-            left: 0px
-    .catalog__content
-        padding-right: 80px
-        padding-left: 80px
+            width: 400px
+            height: 300px
+    .next
+        right: -10px
+    .prev
+        left: -10px
     .feed
         padding-left: 30px
 
@@ -52,9 +49,75 @@
             height: 300px
     .catalog__tab
         width: 170px
-    .catalog__content
-        padding-left: 150px
     .catalog-item
         width: 310px
         &__list
             margin-left: -50px
+
+@media (max-width: 320px)
+    .header
+        flex-direction: column
+        align-items: center
+            width: 120px
+            font-size: 11px
+        &__official
+            margin-top: 10px
+    .header__phone
+        margin-top: 10px
+    .promo
+        padding-left: 20px
+        background: url('../img/main-min.jpg') left (center / cover) no-repeat
+        &__header
+            font-size: 23px
+        &__subheader
+            font-size: 20px
+            text-align: center
+        &__icons
+            padding-left: 230px
+            flex-direction: column
+        &__icon
+            margin-bottom: 10px
+        .button_main
+            width: 260px
+    .title
+        font-size: 25px
+    .advantages
+        &__wrapper
+            flex-direction: column
+            padding-left: 70px
+    .consultation
+        .title_left
+            font-size: 23px
+            text-align: center
+        &__descr
+            font-size: 18px
+            text-align: center
+    .carousel
+        img
+            width: 250px
+            height: 170px
+        .next
+            right: -5px
+            img
+                width: 27px
+                height: 43px
+        .prev
+            left: -5px
+            img
+                width: 27px
+                height: 43px
+    .catalog
+        &__tab
+            width: 90px
+            font-size: 10px
+        &-item
+            width: 600px
+    .feed
+        &__img
+            margin-left: 60px
+            margin-bottom: 20px
+        &__item
+            flex-direction: column
+        &__text
+            margin-left: 0px
+            margin-right: 0px

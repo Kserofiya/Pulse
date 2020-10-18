@@ -98,7 +98,7 @@ $('form').submit(function(e) {
       data: $(this).serialize()
   }).done(function() {
       $(this).find("input").val("");
-      $('#consultation, #order').fadeOut();
+      $('#consultation, #consultation-form, #order').fadeOut();
       $('.overlay, #thanks').fadeIn();
       $('form').trigger('reset');
   });
